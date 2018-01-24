@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: koreci-s_development
+
+test:
+  <<: *default
+  database: koreci-s_test
+
+production:
+  <<: *default
+  database: koreci-s_production
+  username: koreci-s
+  password: <%= ENV['KORECI-S_DATABASE_PASSWORD'] %>

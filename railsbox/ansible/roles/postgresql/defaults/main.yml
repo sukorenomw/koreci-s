@@ -1,0 +1,6 @@
+---
+postgresql_version: "9.6"
+postgresql_package_version: "9.6.*-2.pgdg14.04+1"
+postgresql_ext_postgis_version: 2.1
+postgresql_extensions: []
+postgresql_admin_user: postgres
